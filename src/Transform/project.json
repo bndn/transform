@@ -1,22 +1,24 @@
 {
     "version": "0.0.0",
-    "description": "",
+    "description": "A library for working with 3-dimensional affine transformations",
     "authors": [
+        "Kasper Kronborg Isager <kasi@itu.dk>"
     ],
     "tags": [
+        "affine",
+        "transformation",
+        "3d"
     ],
     "projectUrl": "https://github.itu.dk/bndn/transform",
     "licenseUrl": "https://github.itu.dk/bndn/transform/blob/master/LICENSE.md",
 
     "dependencies": {
+        "Point": "",
+        "Vector": "",
         "FSharp.Dnx": {
             "type": "build",
             "version": "1.0.0-*"
         }
-    },
-
-    "commands": {
-        "run": "run"
     },
 
     "frameworks": {
@@ -30,7 +32,8 @@
     },
     "fsharp": {
         "files": [
-            "Program.fs"
+            "Transform.fsi",
+            "Transform.fs"
         ]
     }
 }
