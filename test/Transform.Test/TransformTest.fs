@@ -41,6 +41,12 @@ let ``scale constructs a scaling transformation`` () =
     v * t |> should equal u
 
 [<Fact>]
+let ``scale fails if given negative values`` () =
+    (fun () -> scale -2. 0. 0. |> ignore) |> shouldFail
+    (fun () -> scale 0. -2. 0. |> ignore) |> shouldFail
+    (fun () -> scale 0. 0. -2. |> ignore) |> shouldFail
+
+[<Fact>]
 let ``mirror constructs a mirroring transformation`` () =
     let tx = mirror X
     let ty = mirror Y

@@ -120,6 +120,10 @@ let translate x y z =
 /// <param name=z>The z component of the transformation.</param>
 /// <returns>The scaling transformation.</returns>
 let scale x y z =
+    if x < 0. then invalidArg "x" "Must be greater than or equal to 0"
+    if y < 0. then invalidArg "y" "Must be greater than or equal to 0"
+    if z < 0. then invalidArg "z" "Must be greater than or equal to 0"
+
     T((x,  0., 0., 0.),
       (0., y,  0., 0.),
       (0., 0., z,  0.),
